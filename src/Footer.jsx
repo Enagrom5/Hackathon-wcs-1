@@ -1,5 +1,5 @@
-function () {
-    return (  );
+function Footer() {
+    return ( <div>TOTO</div> );
 }
 
-export default ;
+export default Footer;

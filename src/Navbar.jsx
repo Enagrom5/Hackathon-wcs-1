@@ -1,5 +1,5 @@
-function () {
-    return (  );
+function NavBar() {
+    return ( <div>TOTO</div> );
 }
 
-export default ;
+export default NavBar;
