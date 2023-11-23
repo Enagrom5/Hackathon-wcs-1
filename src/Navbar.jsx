@@ -30,21 +30,22 @@ function NavBar({ price, numberArticle }) {
           </button>
         </li>
         <li className="flex items-center mr-2">
-          {numberArticle >1 ? "Articles" : "Article"}{" "}
-          {price}€
+          {numberArticle > 1 ? "Articles" : "Article"} {price}€
         </li>
         <button
-        className="flex items-center mr-2"
-            type="button"
-            onClick={() => {
-              setOpenModal(true);
-            }}
-          >
-            Connexion
-          </button>
-          {openModal && <div className="blur-background">
-            (<Login closeModal={setOpenModal} />)
-            </div>}
+          className="flex items-center mr-2"
+          type="button"
+          onClick={() => {
+            setOpenModal(true);
+          }}
+        >
+          Connexion
+        </button>
+        {openModal && (
+          <div className="blur-background">
+            <Login closeModal={setOpenModal} />
+          </div>
+        )}
       </ul>
     </div>
   );

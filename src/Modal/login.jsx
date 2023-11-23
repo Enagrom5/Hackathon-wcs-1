@@ -1,19 +1,17 @@
 import PropTypes from "prop-types";
+import { IoCloseOutline } from "react-icons/io5";
 
 function Login({ closeModal }) {
   return (
     <section>
-      <div className="mx-auto w-full max-w-3xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
-        <div className="max-w-xl bg-gray-300 px-8 pb-12 pt-2 text-center rounded-xl">
+      <div className="flex justify-center items-center">
+        <div className="w-[40%] bg-gray-300 px-8 pb-12 pt-2 text-center rounded-xl">
           <h2 className="text-3xl font-bold md:text-5xl">
             <div className="flex justify-end">
-              <button
-                className="text-[#636262] text-2xl translate-x-4"
-                type="button"
+              <IoCloseOutline
+                className="text-[#636262] text-2xl translate-x-4 cursor-pointer hover:text-red-500"
                 onClick={() => closeModal(false)}
-              >
-                <p> X </p>
-              </button>
+              />
             </div>
           </h2>
           <p className="mx-auto my-5 max-w-md text-sm text-[#636262] sm:text-base lg:mb-8">
@@ -51,11 +49,14 @@ function Login({ closeModal }) {
                   <img
                     alt=""
                     src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a9455fae6cf89_EnvelopeSimple.svg"
-                    className="absolute left-[5%] top-[26%] inline-block"
+                    className="absolute left-[5%] top-[46%] inline-block"
                   />
+                  <p className="peer-invalid:visible text-pink-600 text-sm text-left">
+                    Veuillez saisir une adresse mail valide.
+                  </p>
                   <input
                     type="email"
-                    className="mb-4 block h-9 w-full rounded-md border border-solid border-black px-3 py-6 pl-14 text-sm text-[#333333]"
+                    className="peer mb-4 block h-9 w-full rounded-md border border-solid border-black px-3 py-6 pl-14 text-sm text-[#333333] focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                     placeholder="Email Address"
                     required=""
                   />
@@ -64,11 +65,14 @@ function Login({ closeModal }) {
                   <img
                     alt=""
                     src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a946794e6cf8a_Lock-2.svg"
-                    className="absolute left-[5%] top-[26%] inline-block"
+                    className="absolute left-[5%] top-[46%] inline-block"
                   />
+                  <p className="per-invalid:visible text-pink-600 text-sm text-left">
+                    Veuillez saisir un mot de passe valide.
+                  </p>
                   <input
                     type="password"
-                    className="mb-4 block h-9 w-full rounded-md border border-solid border-black px-3 py-6 pl-14 text-sm text-[#333333]"
+                    className="per mb-4 block h-9 w-full rounded-md border border-solid border-black px-3 py-6 pl-14 text-sm text-[#333333] focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                     placeholder="Password (min 8 characters)"
                     required=""
                   />
