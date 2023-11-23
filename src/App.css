@@ -1,18 +1,26 @@
-#root{
+#root {
   height: 100vh;
 }
-.Navbar{
+
+.Footer {
   height: 5vh;
-}
-.Footer{
-  height: 5vh;
-}
-.Accueil,.E-shop{
-  height: 90vh;
 }
 .Accueil{
+  height: 87vh;
+}
+.Accueil {
   background-image: url("./assets/BG1.jpg");
-  background-size: 100vw 90vh;
-  
+  background-size: 100vw 87vh;
+
   background-repeat: no-repeat;
+}
+.Navbar {
+  background-image: url("./assets/navbg.png");
+  background-size: cover;
+  height: 8vh;
+}
+.Footer {
+  background-image: url("./assets/footerbg.png");
+  background-size: cover;
+  height: 5vh;
 }
