@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 
-function Modal({ closeModal }) {
+function Login({ closeModal }) {
   return (
     <section>
       <div className="mx-auto w-full max-w-3xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
-        <div className="max-w-xl bg-purple-heart-100 px-8 pb-12 pt-2 text-center rounded-xl">
+        <div className="max-w-xl bg-gray-300 px-8 pb-12 pt-2 text-center rounded-xl">
           <h2 className="text-3xl font-bold md:text-5xl">
             <div className="flex justify-end">
               <button
@@ -23,7 +23,7 @@ function Modal({ closeModal }) {
           <div className="mx-auto w-full max-w-[400px]">
             <p
               href="#"
-              className="flex w-full max-w-full justify-center rounded-md bg-purple-heart-500 py-3 text-white"
+              className="flex w-full max-w-full justify-center rounded-md bg-gray-300 py-3 text-white"
             >
               <img
                 src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a947090e6cf87_GoogleLogo.svg"
@@ -92,8 +92,8 @@ function Modal({ closeModal }) {
     </section>
   );
 }
-Modal.propTypes = {
+Login.propTypes = {
   closeModal: PropTypes.func.isRequired,
 };
 
-export default Modal;
+export default Login;

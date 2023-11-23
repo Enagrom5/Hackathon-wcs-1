@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import Login from "./Modal/Login";
+import Login from "./Modal/Login.jsx";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 function NavBar() {
@@ -26,9 +26,7 @@ function NavBar() {
           {" "}
           <Link to="">Panier</Link>
         </li>
-        <li className="p-3">
-          {" "}
-          <button
+        <button
             type="button"
             onClick={() => {
               setOpenModal(true);
@@ -36,8 +34,9 @@ function NavBar() {
           >
             Connexion
           </button>
-          {openModal && <Login closeModal={setOpenModal} />}
-        </li>
+          {openModal && <div className="blur-background">
+            (<Login closeModal={setOpenModal} />)
+            </div>}
       </ul>
     </div>
   );

@@ -6,7 +6,7 @@ function Gift({ data }) {
     <div>
       <img src={data.img} alt={data.description} />
       <title>{data.name}</title>
-      <p>{data.price}</p>
+      <p>{data.price} euro</p>
       <button type="button" onClick={() => setAdd(add)}>
         Add
       </button>

@@ -34,7 +34,7 @@ function GiftDetails() {
           <h1>{gift.name}</h1>
           <h3>{gift.id}</h3>
           <img src={gift.img} alt={gift.name} />
-          <p>{gift.price}</p>
+          <p>{gift.price} euro</p>
           <p>{gift.description}</p>
         </div>
         <div>

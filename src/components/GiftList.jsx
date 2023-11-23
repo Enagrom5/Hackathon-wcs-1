@@ -13,7 +13,7 @@ function GiftList() {
 
  
   return (
-    <div div className="E-shop">
+    <div className="E-shop">
       <h1>My Chrismast gift</h1>
       <form>
         <label htmlFor="select-gift">
