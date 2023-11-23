@@ -2,8 +2,9 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Gift({ data, price, setPrice }) {
-  const [numberArticle, setNumberArticle] = useState(0);
+
+function Gift({ data, price, setPrice, numberArticle, setNumberArticle }) {
+  
   function handlePanier(item) {
     setNumberArticle(numberArticle + 1);
     setPrice(Math.round((price + item.price) * 100) / 100);
@@ -12,8 +13,9 @@ function Gift({ data, price, setPrice }) {
     setNumberArticle(numberArticle - 1);
     setPrice(Math.round((price - item.price) * 100) / 100);
   }
-
+console.log(numberArticle)
   return (
+    <>
     <div className="flex flex-col items-center justify-around">
       <Link to={`/gift/${data.id}`}>
         <img src={data.img} alt={data.description} />
@@ -35,6 +37,7 @@ function Gift({ data, price, setPrice }) {
         </button>
       </span>
     </div>
+      </>
   );
 }
 Gift.propTypes = {

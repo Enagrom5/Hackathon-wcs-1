@@ -6,7 +6,7 @@ import "./App.css";
 
 function NavBar({ price, numberArticle }) {
   return (
-    <div className=" Navbar bg-red-300 flex justify-between items-center ">
+    <div className=" Navbar flex justify-between items-center ">
       <div className=" pl-4 flex items-center">
         <img src="../logo.png" alt="logo" />
         <h1 className="text-2xl">

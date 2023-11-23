@@ -1,16 +1,15 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import data from "../../data/data.json";
 import Gift from "./gift";
 
-function GiftList(numberArticle, setNumberArticle,price,setPrice) {
+function GiftList(price,setPrice) {
   const [filters, setFilters] = useState("");
   let array = [];
   for (let i = 0; i < 15; i++) {
     array.push(data[i].categories);
   }
   const newArray = [...new Set(array)];
-
+  const [numberArticle, setNumberArticle] = useState(0);
   return (
     <div className="E-shop  flex flex-wrap items-center">
       <div className="flex justify-center items-center p-2 w-full">
