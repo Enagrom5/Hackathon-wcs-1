@@ -2,11 +2,17 @@
   height: 100vh;
 }
 .Navbar{
-  height: 10vh;
+  height: 5vh;
 }
-.footer{
-  height: 10vh;
+.Footer{
+  height: 5vh;
 }
-.Outlet{
-  height: 80vh;
+.Accueil,.E-shop{
+  height: 90vh;
+}
+.Accueil{
+  background-image: url("./assets/BG1.jpg");
+  background-size: 100vw 90vh;
+  
+  background-repeat: no-repeat;
 }

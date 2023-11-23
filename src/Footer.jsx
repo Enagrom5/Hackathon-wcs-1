@@ -1,7 +1,7 @@
 function Footer() {
-  return <div className="bg-red-600">
+  return <div className="Footer bg-red-300 flex items-center">
     <p>TEAM NAVIDAD</p>
-    <p>@copyrigth</p>
+    <p >@copyrigth</p>
     </div>;
 }
 
