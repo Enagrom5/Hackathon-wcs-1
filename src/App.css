@@ -1,9 +1,12 @@
 #root {
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
 }
+
 
 .Accueil, .giftDetail{
   height: 87vh;
+
 }
 .E-shop{
   margin-bottom: 50vh;
@@ -26,4 +29,14 @@
   bottom: 0px;
   width: 100%;
   
+
+.blur-background {
+  backdrop-filter: blur(1rem);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+
 }

@@ -9,8 +9,10 @@ function App() {
   const [numberArticle,setNumberArticle]=useState(0)
   return (
     <>
+
       <Navbar price={price} numberArticle={numberArticle} />
       <Outlet context={{price, setPrice, numberArticle,setNumberArticle}} />
+
       <Footer />
     </>
   );
