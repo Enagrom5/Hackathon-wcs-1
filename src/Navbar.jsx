@@ -22,11 +22,11 @@ function NavBar({ price, numberArticle }) {
         </li>
         <li className="flex items-center mr-2">
           <button className="flex items-center">
-            <Link to="">Panier{numberArticle}</Link>
+            <Link to="">Panier {numberArticle}</Link>
             <img src={cart} className="cart" />
           </button>
         </li>
-        <li className="flex items-center mr-2">
+        <li className="flex items-center mr-2 ml-2">
           {numberArticle >1 ? "Articles" : "Article"}{" "}
           {price}€
         </li>

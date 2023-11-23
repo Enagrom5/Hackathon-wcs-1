@@ -2,8 +2,11 @@
   height: 100vh;
 }
 
-.Accueil, .E-shop, .giftDetail{
+.Accueil, .giftDetail{
   height: 87vh;
+}
+.E-shop{
+  margin-bottom: 50vh;
 }
 .Accueil {
   background-image: url("./assets/BG1.jpg");
@@ -19,5 +22,8 @@
   background-image: url("./assets/footerbg.png");
   background-size: cover;
   height: 5vh;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
   
 }
