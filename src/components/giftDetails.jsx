@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
-function giftDetails() {
+function GiftDetails() {
   const [gift, setGift] = useState(null);
 
   const { id } = useParams();
@@ -60,4 +60,4 @@ function giftDetails() {
   );
 }
 
-export default giftDetails;
+export default GiftDetails;
