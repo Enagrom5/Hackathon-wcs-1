@@ -2,14 +2,15 @@ import { useState } from "react";
 import data from "../../data/data.json";
 import Gift from "./gift";
 
-function GiftList(price,setPrice) {
+
+function GiftList() {
   const [filters, setFilters] = useState("");
   let array = [];
   for (let i = 0; i < 15; i++) {
     array.push(data[i].categories);
   }
   const newArray = [...new Set(array)];
-  const [numberArticle, setNumberArticle] = useState(0);
+  
   return (
     <div className="E-shop  flex flex-wrap items-center">
       <div className="flex justify-center items-center p-2 w-full">
@@ -36,11 +37,7 @@ function GiftList(price,setPrice) {
           <div className="m-4 border-2 border-amber-200 rounded-md shadow-2xl " key={el.id}>
             
               <Gift
-                data={el}
-                price={price}
-                setPrice={setPrice}
-                numberArticle={numberArticle}
-                setNumberArticle={setNumberArticle}
+                
               />
            
             
