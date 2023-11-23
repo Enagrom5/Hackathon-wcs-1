@@ -2,18 +2,12 @@
   height: 100vh;
 }
 
-.Footer {
-  height: 5vh;
-}
-
-
-.Accueil{
+.Accueil, .E-shop, .giftDetail{
   height: 87vh;
 }
 .Accueil {
   background-image: url("./assets/BG1.jpg");
   background-size: 100vw 87vh;
-
   background-repeat: no-repeat;
 }
 .Navbar {
@@ -25,6 +19,7 @@
   background-image: url("./assets/footerbg.png");
   background-size: cover;
   height: 5vh;
+  
 }
 .blur-background {
   backdrop-filter: blur(1rem);

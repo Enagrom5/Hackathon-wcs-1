@@ -6,28 +6,35 @@ import cart from "./assets/cart.png";
 
 import "./App.css";
 
-function NavBar({ price, nombreArticle }) {
+function NavBar({ price, numberArticle }) {
   const [openModal, setOpenModal] = useState(false);
   return (
-
-    <div className=" Navbar bg-red-300 flex justify-between items-center " >
-    <div className=" pl-4 flex items-center"><img src="./logo.png" alt="logo"/>
-      <h1 className="text-2xl"><Link to="/"> HackaNoël</Link></h1>
-    </div>
-    <ul className="flex  ">
-        <li className="p-3"> <Link to="/" >Accueil </Link> </li>
-        <li className="p-3"> <Link to="/gift" >E-shop</Link></li>
-         <li>
-          {" "}
-          <Link to="">Panier{nombreArticle}</Link>
+    <div className=" Navbar flex justify-between items-center ">
+      <div className=" pl-4 flex items-center">
+        <img src="../logo.png" alt="logo" />
+        <h1 className="text-2xl">
+          <Link to="/"> HackaNoël</Link>
+        </h1>
+      </div>
+      <ul className="flex items-center  mr-2 ">
+        <li className="mr-2">
+          <Link to="/">Accueil </Link>
         </li>
-        <li>
-          <img src={cart} className="cart" />
+        <li className="mr-2">
+          <Link to="/gift">E-shop</Link>
         </li>
-        <li>
-          {nombreArticle !== 1 && nombreArticle !== 0 ? "Articles" : "Article"} {price}€
+        <li className="flex items-center mr-2">
+          <button className="flex items-center">
+            <Link to="">Panier{numberArticle}</Link>
+            <img src={cart} className="cart" />
+          </button>
+        </li>
+        <li className="flex items-center mr-2">
+          {numberArticle >1 ? "Articles" : "Article"}{" "}
+          {price}€
         </li>
         <button
+        className="flex items-center mr-2"
             type="button"
             onClick={() => {
               setOpenModal(true);
@@ -44,7 +51,7 @@ function NavBar({ price, nombreArticle }) {
 }
 NavBar.propTypes = {
   price: PropTypes.number,
-  nombreArticle: PropTypes.number,
+  numberArticle: PropTypes.number,
 };
 
 export default NavBar;
