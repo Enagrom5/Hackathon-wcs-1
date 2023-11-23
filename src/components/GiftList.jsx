@@ -3,15 +3,14 @@ import { useState } from "react";
 import data from "../../data/data.json";
 import Gift from "./gift";
 
-function GiftList() {
+function GiftList(numberArticle, setNumberArticle,price,setPrice) {
   const [filters, setFilters] = useState("");
- let array=[]
- for (let i =0; i<15;i++){
-  array.push(data[i].categories)
- }
-  const newArray=[...new Set(array)]
+  let array = [];
+  for (let i = 0; i < 15; i++) {
+    array.push(data[i].categories);
+  }
+  const newArray = [...new Set(array)];
 
- 
   return (
     <>
       <h1>My Chrismast gift</h1>
@@ -34,7 +33,13 @@ function GiftList() {
         .map((el) => (
           <li key={el.id}>
             <Link to={`/gift/${el.id}`}>
-              <Gift data={el} />
+              <Gift
+                data={el}
+                price={price}
+                setPrice={setPrice}
+                numberArticle={numberArticle}
+                setNumberArticle={setNumberArticle}
+              />
             </Link>
           </li>
         ))}
