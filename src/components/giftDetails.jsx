@@ -29,7 +29,7 @@ function GiftDetails() {
 
   return (
     <div className="m-[100px] flex justify-center leading-[40px]">
-      <div className="w-[800px] bg-lime-200 p-[4rem]">
+      <div className="w-[800px] bg-amber-100 rounded-lg shadow-2xl p-[4rem]">
         <div key={gift.id}>
           <h1 className="text-center">{gift.name}</h1>
           <div className="flex justify-center">

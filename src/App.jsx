@@ -5,9 +5,10 @@ import Footer from "./Footer";
 import "./App.css";
 
 function App() {
+  
   return (
     <>
-      <Navbar />
+      <Navbar prix={price} nombrePanier={numberArticle}/>
       <Outlet  />
       <Footer />
     </>

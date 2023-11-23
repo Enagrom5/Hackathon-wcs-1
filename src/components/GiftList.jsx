@@ -1,19 +1,18 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import data from "../../data/data.json";
 import Gift from "./gift";
 
-function GiftList(numberArticle, setNumberArticle,price,setPrice) {
+function GiftList(price,setPrice) {
   const [filters, setFilters] = useState("");
   let array = [];
   for (let i = 0; i < 15; i++) {
     array.push(data[i].categories);
   }
   const newArray = [...new Set(array)];
-
+  const [numberArticle, setNumberArticle] = useState(0);
   return (
-    <div className="E-shop ">
-      <div className="flex justify-center items-center p-2">
+    <div className="E-shop  flex flex-wrap items-center">
+      <div className="flex justify-center items-center p-2 w-full">
       <h1>My Chrismast gift</h1>
       <form className="border-2 ml-2">
         <label htmlFor="select-gift">
@@ -21,7 +20,7 @@ function GiftList(numberArticle, setNumberArticle,price,setPrice) {
             <option value="">----</option>
             {newArray.map((acces) => {
               return (
-                <option key={acces.id} value={acces.id}>
+                <option key={acces} value={acces}>
                   {acces}
                 </option>
               );
@@ -30,12 +29,12 @@ function GiftList(numberArticle, setNumberArticle,price,setPrice) {
         </label>
       </form>
       </div>
-      <div className="flex flex-wrap justify-center" > 
+      <div className="flex flex-wrap justify-center items-center" > 
       {data
         .filter((el) => el.categories === filters || filters === "")
         .map((el) => (
-          <div className="m-4 border-2 rounded " key={el.id}>
-            <Link to={`/gift/${el.id}`}>
+          <div className="m-4 border-2 border-amber-200 rounded-md shadow-2xl " key={el.id}>
+            
               <Gift
                 data={el}
                 price={price}
@@ -43,7 +42,7 @@ function GiftList(numberArticle, setNumberArticle,price,setPrice) {
                 numberArticle={numberArticle}
                 setNumberArticle={setNumberArticle}
               />
-            </Link>
+           
             
           </div>
         ))}
