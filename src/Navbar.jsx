@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import cart from "./assets/cart.png";
+
 import "./App.css";
 
-function NavBar() {
+function NavBar({ price, nombreArticle }) {
   return (
+
     <div className=" Navbar bg-red-300 flex justify-between items-center " >
     <div className=" pl-4 flex items-center"><img src="./logo.png" alt="logo"/>
       <h1 className="text-2xl"><Link to="/"> HackaNoël</Link></h1>
@@ -10,11 +14,28 @@ function NavBar() {
     <ul className="flex  ">
         <li className="p-3"> <Link to="/" >Accueil </Link> </li>
         <li className="p-3"> <Link to="/gift" >E-shop</Link></li>
-        <li className="p-3"> <Link to="" >Panier</Link></li>
-        <li className="p-3"> <Link to="" >Connexion</Link></li>
+         <li>
+          {" "}
+          <Link to="">Panier{nombreArticle}</Link>
+        </li>
+        <li>
+          <img src={cart} className="cart" />
+        </li>
+        <li>
+          {nombreArticle !== 1 && nombreArticle !== 0 ? "Articles" : "Article"} {price}€
+        </li>
+        <li>
+          {" "}
+          <Link to="">Connexion</Link>
+        </li>
     </ul>
+
     </div>
   );
 }
+NavBar.propTypes = {
+  price: PropTypes.number,
+  nombreArticle: PropTypes.number,
+};
 
 export default NavBar;
