@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Bougie",
     "description": "Magnifique bougie pour vous mettre dans l'ambiance",
-    "img": "./bougie.webp",
+    "img": "./bougie.jpg",
     "price": 4,
     "categories": "Accessoire"
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "name": "All I want for Christmas is you",
     "description": "Célèbre chant de noël",
-    "img": "./cd",
+    "img": "./cd.jpg",
     "price": 1,
     "categories": "Multimédia"
   },
@@ -116,7 +116,7 @@
     "id": 15,
     "name": "Mère Noël",
     "description": "Costume de la mère noël",
-    "img": "./costumef.webp",
+    "img": "./costumef.jpg",
     "price": 18,
     "categories": "Vêtement"
   }
