@@ -1,12 +1,28 @@
-#root{
+#root {
   height: 100vh;
 }
-.Navbar{
-  height: 10vh;
+
+.Footer {
+  height: 5vh;
 }
-.footer{
-  height: 10vh;
+
+
+.Accueil{
+  height: 87vh;
 }
-.Outlet{
-  height: 80vh;
+.Accueil {
+  background-image: url("./assets/BG1.jpg");
+  background-size: 100vw 87vh;
+
+  background-repeat: no-repeat;
+}
+.Navbar {
+  background-image: url("./assets/navbg.png");
+  background-size: cover;
+  height: 8vh;
+}
+.Footer {
+  background-image: url("./assets/footerbg.png");
+  background-size: cover;
+  height: 5vh;
 }
