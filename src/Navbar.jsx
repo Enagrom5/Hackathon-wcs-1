@@ -1,3 +1,5 @@
+import { useState } from "react";
+import Login from "./Modal/Login.jsx";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import cart from "./assets/cart.png";
@@ -5,6 +7,7 @@ import cart from "./assets/cart.png";
 import "./App.css";
 
 function NavBar({ price, numberArticle }) {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div className=" Navbar flex justify-between items-center ">
       <div className=" pl-4 flex items-center">
@@ -30,9 +33,18 @@ function NavBar({ price, numberArticle }) {
           {numberArticle >1 ? "Articles" : "Article"}{" "}
           {price}€
         </li>
-        <li className="flex items-center mr-2">
-          <Link to="">Connexion</Link>
-        </li>
+        <button
+        className="flex items-center mr-2"
+            type="button"
+            onClick={() => {
+              setOpenModal(true);
+            }}
+          >
+            Connexion
+          </button>
+          {openModal && <div className="blur-background">
+            (<Login closeModal={setOpenModal} />)
+            </div>}
       </ul>
     </div>
   );
