@@ -28,31 +28,49 @@ function GiftDetails() {
   };
 
   return (
-    <>
-      <div className="giftDetail flex flex-col justify-center items-center ">
+    <div className="m-[100px] flex justify-center leading-[40px]">
+      <div className="w-[800px] bg-amber-100 rounded-lg shadow-2xl p-[4rem]">
         <div key={gift.id}>
-          <h1 className="text-center mb-4">{gift.name}</h1>
-          <img src={gift.img} alt={gift.name} className="m-auto"/>
-          <p className="text-center mb-4">{gift.price}€</p>
-          <p className="text-center mb-4">{gift.description}</p>
+          <h1 className="text-center">{gift.name}</h1>
+          <div className="flex justify-center">
+            <img src={gift.img} alt={gift.name} />
+          </div>
+          <p>Prix: {gift.price}</p>
+          <p>
+            Description: <br></br>
+            {gift.description}
+          </p>
         </div>
-        <div>
+        <div className="mt-[5rem] flex justify-around">
           {gift.id > 1 && (
-            <button type="button" onClick={handlePrevious}>
+            <button
+              type="button"
+              onClick={handlePrevious}
+              className="px-[1rem] px-[.5rem] bg-white rounded-[0.3rem] duration-1000 hover:scale-110 hover:bg-slate-200"
+            >
               Précédent
             </button>
           )}
           <Link to="/gift">
-            <button type="button">Retour</button>
+            <button
+              type="button"
+              className="px-[1rem] px-[.5rem] bg-white rounded-[0.3rem] duration-1000 hover:scale-110 hover:bg-slate-200"
+            >
+              Retour
+            </button>
           </Link>
           {gift.id < 15 && (
-            <button type="button" onClick={handleNext}>
+            <button
+              type="button"
+              onClick={handleNext}
+              className="px-[1rem] px-[.5rem] bg-white rounded-[0.3rem] duration-1000 hover:scale-110 hover:bg-slate-200"
+            >
               Suivant
             </button>
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

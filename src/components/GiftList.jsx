@@ -21,7 +21,7 @@ function GiftList(numberArticle, setNumberArticle,price,setPrice) {
             <option value="">----</option>
             {newArray.map((acces) => {
               return (
-                <option key={acces.id} value={acces.id}>
+                <option key={acces} value={acces}>
                   {acces}
                 </option>
               );
@@ -35,7 +35,7 @@ function GiftList(numberArticle, setNumberArticle,price,setPrice) {
         .filter((el) => el.categories === filters || filters === "")
         .map((el) => (
           <div className="m-4 border-2 border-amber-200 rounded-md shadow-2xl " key={el.id}>
-            <Link to={`/gift/${el.id}`}>
+            
               <Gift
                 data={el}
                 price={price}
@@ -43,7 +43,7 @@ function GiftList(numberArticle, setNumberArticle,price,setPrice) {
                 numberArticle={numberArticle}
                 setNumberArticle={setNumberArticle}
               />
-            </Link>
+           
             
           </div>
         ))}
