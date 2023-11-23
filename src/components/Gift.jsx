@@ -2,16 +2,20 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { useOutletContext } from "react-router-dom";
 
+
 function Gift({ data }) {
-  const [price, setPrice] = useOutletContext();
-  const [numberArticle, setNumberArticle] = useOutletContext();
-  function handlePanier(item) {
-    setNumberArticle(numberArticle + 1);
-    setPrice(Math.round((price + item.price) * 100) / 100);
+  const {price, setPrice, numberArticle, setNumberArticle} = useOutletContext();
+  
+
+  
+  function handlePanier() {
+    setNumberArticle((prev)=>prev+1);
+    setPrice(Math.round((price + data.price) * 100) / 100);
+    
   }
-  function panierdelete(item) {
-    setNumberArticle(numberArticle - 1);
-    setPrice(Math.round((price - item.price) * 100) / 100);
+  function panierdelete() {
+    setNumberArticle((prev)=>prev-1);
+    setPrice(Math.round((price - data.price) * 100) / 100);
   }
   console.log(numberArticle);
   return (

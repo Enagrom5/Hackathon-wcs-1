@@ -3,10 +3,13 @@
   position: relative;
 }
 
-.Accueil,
-.E-shop,
-.giftDetail {
-  min-height: 87vh;
+
+.Accueil, .giftDetail{
+  height: 87vh;
+
+}
+.E-shop{
+  margin-bottom: 50vh;
 }
 .Accueil {
   background-image: url("./assets/BG1.jpg");
@@ -22,8 +25,11 @@
   background-image: url("./assets/footerbg.png");
   background-size: cover;
   height: 5vh;
-  margin-top: 2rem;
-}
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  
+
 .blur-background {
   backdrop-filter: blur(1rem);
   position: fixed;
@@ -32,4 +38,5 @@
   width: 100vw;
   height: 100vh;
   z-index: 100;
+
 }
