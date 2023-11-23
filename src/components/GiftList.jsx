@@ -12,8 +12,8 @@ function GiftList(numberArticle, setNumberArticle,price,setPrice) {
   const newArray = [...new Set(array)];
 
   return (
-    <div className="E-shop ">
-      <div className="flex justify-center items-center p-2">
+    <div className="E-shop  flex flex-wrap items-center">
+      <div className="flex justify-center items-center p-2 w-full">
       <h1>My Chrismast gift</h1>
       <form className="border-2 ml-2">
         <label htmlFor="select-gift">
@@ -30,11 +30,11 @@ function GiftList(numberArticle, setNumberArticle,price,setPrice) {
         </label>
       </form>
       </div>
-      <div className="flex flex-wrap justify-center" > 
+      <div className="flex flex-wrap justify-center items-center" > 
       {data
         .filter((el) => el.categories === filters || filters === "")
         .map((el) => (
-          <div className="m-4 border-2 rounded " key={el.id}>
+          <div className="m-4 border-2 border-amber-200 rounded-md shadow-2xl " key={el.id}>
             <Link to={`/gift/${el.id}`}>
               <Gift
                 data={el}

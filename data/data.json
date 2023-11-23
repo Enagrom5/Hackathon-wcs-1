@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Pull",
     "description": "Magnifique Pull de Noël",
-    "img": "./pull.jpg",
+    "img": "../pull.jpg",
     "price": 25,
     "categories": "Vêtement"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Chaussette",
     "description": "Lot de chaussette",
-    "img": "./chaussette.jpg",
+    "img": "../chaussette.jpg",
     "price": 9,
     "categories": "Vêtement"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Bouillotte",
     "description": "Bouillotte pour être bien au chaud",
-    "img": "./bouillotte.jpg",
+    "img": "../bouillotte.jpg",
     "price": 10,
     "categories": "Accessoire"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Bougie",
     "description": "Magnifique bougie pour vous mettre dans l'ambiance",
-    "img": "./bougie.jpg",
+    "img": "../bougie.jpg",
     "price": 4,
     "categories": "Accessoire"
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "name": "Guirlande",
     "description": "Guirlande pour Noël",
-    "img": "./guirlande.jpg",
+    "img": "../guirlande.jpg",
     "price": 2,
     "categories": "Décoration"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "name": "Sapin",
     "description": "Sapin de Noël",
-    "img": "./sapin.jpg",
+    "img": "../sapin.jpg",
     "price": 35,
     "categories": "Décoration"
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "name": "Echarpe",
     "description": "Echarpe de noël",
-    "img": "./echarpe.jpg",
+    "img": "../echarpe.jpg",
     "price": 7,
     "categories": "Vêtement"
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "name": "All I want for Christmas is you",
     "description": "Célèbre chant de noël",
-    "img": "./cd.jpg",
+    "img": "../cd.jpg",
     "price": 1,
     "categories": "Multimédia"
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "name": "Boule",
     "description": "Boule de noël",
-    "img": "./boule.jpg",
+    "img": "../boule.jpg",
     "price": 2,
     "categories": "Décoration"
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "name": "Gâteau",
     "description": "Gâteau pour noël",
-    "img": "./gateau.jpg",
+    "img": "../gateau.jpg",
     "price": 15,
     "categories": "Alimentation"
   },
@@ -83,7 +83,7 @@
     "id": 11,
     "name": "Bûche",
     "description": "Fameuse buche au chocolat",
-    "img": "./buche.jpg",
+    "img": "../buche.jpg",
     "price": 12,
     "categories": "Alimentation"
   },
@@ -91,7 +91,7 @@
     "id": 12,
     "name": "Anthony",
     "description": "Super formateur mais sensible au froid",
-    "img": "./antho.png",
+    "img": "../antho.png",
     "price": 0.5,
     "categories": "Multitâche"
   },
@@ -99,7 +99,7 @@
     "id": 13,
     "name": "Benoît",
     "description": "Super formateur mais version chevelu",
-    "img": "./benoit.png",
+    "img": "../benoit.png",
     "price": 0.5,
     "categories": "Multitâche"
   },
@@ -108,7 +108,7 @@
     "id": 14,
     "name": "Père Noël",
     "description": "Costume du père noël",
-    "img": "./costume.jpg",
+    "img": "../costume.jpg",
     "price": 15,
     "categories": "Vêtement"
   },
@@ -116,7 +116,7 @@
     "id": 15,
     "name": "Mère Noël",
     "description": "Costume de la mère noël",
-    "img": "./costumef.jpg",
+    "img": "../costumef.jpg",
     "price": 18,
     "categories": "Vêtement"
   }

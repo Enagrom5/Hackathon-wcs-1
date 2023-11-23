@@ -10,7 +10,7 @@ function Gift({ data, price, setPrice, numberArticle, setNumberArticle }) {
     <div>
       <img src={data.img} alt={data.description} />
       <title>{data.name}</title>
-      <p>{data.price}</p>
+      <p>{data.price}€</p>
       <button onClick={() => handlePanier()}>Ajouter au Panier</button>
     </div>
   );

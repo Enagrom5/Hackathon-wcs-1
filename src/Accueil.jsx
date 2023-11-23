@@ -1,5 +1,3 @@
-import BG from "../src/assets/BG.jpg";
-
 function Accueil() {
   return (
     <div>

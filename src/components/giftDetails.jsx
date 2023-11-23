@@ -29,13 +29,12 @@ function GiftDetails() {
 
   return (
     <>
-      <div>
+      <div className="giftDetail flex flex-col justify-center items-center ">
         <div key={gift.id}>
-          <h1>{gift.name}</h1>
-          <h3>{gift.id}</h3>
-          <img src={gift.img} alt={gift.name} />
-          <p>{gift.price}</p>
-          <p>{gift.description}</p>
+          <h1 className="text-center mb-4">{gift.name}</h1>
+          <img src={gift.img} alt={gift.name} className="m-auto"/>
+          <p className="text-center mb-4">{gift.price}€</p>
+          <p className="text-center mb-4">{gift.description}</p>
         </div>
         <div>
           {gift.id > 1 && (
