@@ -1,9 +1,12 @@
 #root {
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
 }
 
-.Accueil, .E-shop, .giftDetail{
-  height: 87vh;
+.Accueil,
+.E-shop,
+.giftDetail {
+  min-height: 87vh;
 }
 .Accueil {
   background-image: url("./assets/BG1.jpg");
@@ -19,7 +22,7 @@
   background-image: url("./assets/footerbg.png");
   background-size: cover;
   height: 5vh;
-  
+  margin-top: 2rem;
 }
 .blur-background {
   backdrop-filter: blur(1rem);
