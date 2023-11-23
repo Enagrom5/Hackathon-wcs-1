@@ -1,5 +1,5 @@
 function Footer() {
-    return ( <div>TOTO</div> );
+    return ( <div>TEAM NAVIDAD</div> );
 }
 
 export default Footer;
