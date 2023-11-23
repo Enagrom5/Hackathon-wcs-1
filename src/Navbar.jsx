@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./App.css";
 
 function NavBar() {
@@ -7,10 +8,10 @@ function NavBar() {
       <h1>HackaNoël</h1>
     </div>
     <ul className="flex ">
-        <li >Accueil</li>
-        <li>E-shop</li>
-        <li>Panier</li>
-        <li>Connexion</li>
+        <li> <Link to="" >Accueil </Link> </li>
+        <li> <Link to="/gift" >E-shop</Link></li>
+        <li> <Link to="" >Panier</Link></li>
+        <li> <Link to="" >Connexion</Link></li>
     </ul>
     </div>
   );

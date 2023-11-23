@@ -6,16 +6,7 @@ function GiftDetails() {
 
   const { id } = useParams();
 
-  useEffect(() => {
-    fetch(`http://localhost:5173/gifts/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setGift(data);
-      })
-      .catch((err) => {
-        console.error("ERREUR : l'API gifts n'a pas pu être récupérée :", err);
-      });
-  }, [id]);
+  
 
   const handlePrevious = () => {
     if (gift) {
@@ -47,7 +38,7 @@ function GiftDetails() {
             Précédent
           </button>
         )}
-        <Link to="/shop">
+        <Link to="/gift">
           <button type="button">Retour</button>
         </Link>
         {gift.id < 27 && (

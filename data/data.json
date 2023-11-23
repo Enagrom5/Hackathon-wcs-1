@@ -85,7 +85,7 @@
     "description": "Fameuse buche au chocolat",
     "img": "./buche.jpg",
     "price": 12,
-    "categories": "Alimentaire"
+    "categories": "Alimentation"
   },
   {
     "id": 12,
