@@ -4,7 +4,7 @@ import "./App.css";
 function NavBar() {
   return (
     <div className=" Navbar bg-red-300 flex justify-between items-center " >
-    <div className=" pl-4 flex items-center"><img src="../../public/logo.png" alt="logo"/>
+    <div className=" pl-4 flex items-center"><img src="./logo.png" alt="logo"/>
       <h1 className="text-2xl"><Link to="/"> HackaNoël</Link></h1>
     </div>
     <ul className="flex  ">

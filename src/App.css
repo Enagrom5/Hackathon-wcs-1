@@ -10,3 +10,9 @@
 .Accueil,.E-shop{
   height: 90vh;
 }
+.Accueil{
+  background-image: url("./assets/BG1.jpg");
+  background-size: 100vw 90vh;
+  
+  background-repeat: no-repeat;
+}
