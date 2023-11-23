@@ -28,32 +28,49 @@ function GiftDetails() {
   };
 
   return (
-    <>
-      <div>
+    <div className="m-[100px] flex justify-center leading-[40px]">
+      <div className="w-[800px] bg-lime-200 p-[4rem]">
         <div key={gift.id}>
-          <h1>{gift.name}</h1>
-          <h3>{gift.id}</h3>
-          <img src={gift.img} alt={gift.name} />
-          <p>{gift.price}</p>
-          <p>{gift.description}</p>
+          <h1 className="text-center">{gift.name}</h1>
+          <div className="flex justify-center">
+            <img src={gift.img} alt={gift.name} />
+          </div>
+          <p>Prix: {gift.price}</p>
+          <p>
+            Description: <br></br>
+            {gift.description}
+          </p>
         </div>
-        <div>
+        <div className="mt-[5rem] flex justify-around">
           {gift.id > 1 && (
-            <button type="button" onClick={handlePrevious}>
+            <button
+              type="button"
+              onClick={handlePrevious}
+              className="px-[1rem] px-[.5rem] bg-white rounded-[0.3rem] duration-1000 hover:scale-110 hover:bg-slate-200"
+            >
               Précédent
             </button>
           )}
           <Link to="/gift">
-            <button type="button">Retour</button>
+            <button
+              type="button"
+              className="px-[1rem] px-[.5rem] bg-white rounded-[0.3rem] duration-1000 hover:scale-110 hover:bg-slate-200"
+            >
+              Retour
+            </button>
           </Link>
           {gift.id < 15 && (
-            <button type="button" onClick={handleNext}>
+            <button
+              type="button"
+              onClick={handleNext}
+              className="px-[1rem] px-[.5rem] bg-white rounded-[0.3rem] duration-1000 hover:scale-110 hover:bg-slate-200"
+            >
               Suivant
             </button>
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
