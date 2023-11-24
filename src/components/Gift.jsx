@@ -7,21 +7,32 @@ function Gift({ data }) {
   const { price, setPrice, numberArticle, setNumberArticle } =
     useOutletContext();
 
-  function handlePanier() {
+  const handlePanier = () => {
     setNumberArticle((prev) => prev + 1);
     setPrice(Math.round((price + data.price) * 100) / 100);
-  }
+
+    const articleBasket = {
+      name: data.name,
+      img: data.img,
+      description: data.description,
+      id: data.id,
+      price: data.price,
+    };
+
+    localStorage.setItem(data.id, JSON.stringify(articleBasket));
+  };
   function panierdelete() {
     setNumberArticle((prev) => prev - 1);
     setPrice(Math.round((price - data.price) * 100) / 100);
+
+    localStorage.removeItem(data.id);
   }
   console.log(numberArticle);
+
   return (
     <>
       <div className="w-[20rem] h-[30rem] md:w-none md:h-none flex flex-col items-center justify-around">
-        <Link to={`/gift/${data.id}`}>
-          <img src={data.img} alt={data.description} />
-        </Link>
+        <img src={data.img} alt={data.description} />
         <h6 className="mt-[-2rem] text-[2rem] text-center mx-1">{data.name}</h6>
         <p className="mt-[-2rem] text-[1.4rem]"> {data.price}€</p>
         <div className="w-full flex direction-row justify-around mb-[0.5rem]">
@@ -38,6 +49,11 @@ function Gift({ data }) {
             <BsCartDash />
           </button>
         </div>
+        <Link to={`/gift/${data.id}`}>
+          <p className="text-[0.8rem] text-slate-400 hover:text-slate-500">
+            Cliquez ici pour obtenir davantage de détails
+          </p>
+        </Link>
       </div>
     </>
   );
@@ -47,6 +63,13 @@ Gift.propTypes = {
   setPrice: PropTypes.func,
   numberArticle: PropTypes.number,
   setNumberArticle: PropTypes.func,
+  data: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default Gift;

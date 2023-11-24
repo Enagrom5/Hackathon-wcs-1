@@ -53,7 +53,7 @@ function NavBar({ price, numberArticle }) {
                 </li>
                 <li className="flex items-center mr-2">
                   <button className="flex items-center">
-                    <Link to="">Panier {numberArticle}</Link>
+                    <Link to="/panier">Panier {numberArticle}</Link>
                     <img src={cart} className="cart h-[20px] md:h-[30px]" />
                   </button>
                 </li>
@@ -95,7 +95,7 @@ function NavBar({ price, numberArticle }) {
             </li>
             <li className="flex items-center mr-2">
               <button className="flex items-center">
-                <Link to="">Panier {numberArticle}</Link>
+                <Link to="/panier">Panier {numberArticle}</Link>
                 <img src={cart} className="cart h-[20px] md:h-[30px]" />
               </button>
             </li>
