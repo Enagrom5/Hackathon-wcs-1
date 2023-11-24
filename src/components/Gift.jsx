@@ -4,21 +4,29 @@ import { useOutletContext } from "react-router-dom";
 import { BsCartPlus, BsCartDash } from "react-icons/bs";
 
 function Gift({ data }) {
-  const { price, setPrice, numberArticle, setNumberArticle } =
+  const { price, setPrice, setNumberArticle, carts, setCarts } =
     useOutletContext();
-
+  console.log("toto" + typeof carts);
   function handlePanier() {
+    console.log("titi " + typeof carts);
     setNumberArticle((prev) => prev + 1);
     setPrice(Math.round((price + data.price) * 100) / 100);
+    let arr = carts;
+    arr.push(data);
+    setCarts(arr);
+    console.log(carts);
   }
   function panierdelete() {
     setNumberArticle((prev) => prev - 1);
     setPrice(Math.round((price - data.price) * 100) / 100);
+    let arr = carts;
+    arr.pop(data);
+    setCarts(arr);
   }
-  console.log(numberArticle);
+
   return (
     <>
-      <div className="w-[20rem] h-[30rem] md:w-none md:h-none flex flex-col items-center justify-around">
+      <div className=" card w-[20rem] h-[30rem] md:w-none md:h-none flex flex-col items-center justify-around ">
         <Link to={`/gift/${data.id}`}>
           <img src={data.img} alt={data.description} className="rounded" />
         </Link>

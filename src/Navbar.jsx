@@ -5,11 +5,12 @@ import PropTypes from "prop-types";
 import cart from "./assets/cart.png";
 import { IoCloseOutline, IoMenu } from "react-icons/io5";
 import { useMediaQuery } from "@react-hook/media-query";
+import { useHover } from "@uidotdev/usehooks";
 
 import "./App.css";
 import PlayingMusic from "./Music.jsx";
 
-function NavBar({ price, numberArticle }) {
+function NavBar({ price, numberArticle, carts }) {
   const [openModal, setOpenModal] = useState(false);
   const isMobile = useMediaQuery("only screen and (max-width: 639px)");
 
@@ -22,6 +23,11 @@ function NavBar({ price, numberArticle }) {
   const toggleIconMenu = () => {
     setIconMenu(!iconMenu);
   };
+
+  const [ref, hovering] = useHover();
+  const display = hovering ? "flex" : "none";
+
+  const newcarts = [...new Set(carts)]
 
   return (
     <div>
@@ -95,7 +101,7 @@ function NavBar({ price, numberArticle }) {
             <li className="mr-2">
               <Link to="/gift">E-shop</Link>
             </li>
-            <li className=" flex items-center mr-2">
+            <li ref={ref} className=" flex items-center mr-2">
               <button className=" flex items-center">
                 <Link to="">Panier {numberArticle}</Link>
                 <img src={cart} className="cart h-[20px] md:h-[30px]" />
@@ -122,12 +128,23 @@ function NavBar({ price, numberArticle }) {
           </ul>
         </div>
       )}
+      <div className="cartdiv flex justify-center items-center flex-wrap" style={{ display }}>
+        
+          {newcarts.map((item) => (
+            <div key={item} className="flex p-4">
+                <h2 className="pr-4">{item.name}</h2>
+              <img src={item.img} className="w-10 h-10" />
+            </div>
+          ))}
+        
+      </div>
     </div>
   );
 }
 NavBar.propTypes = {
   price: PropTypes.number,
   numberArticle: PropTypes.number,
+  carts: PropTypes.array
 };
 
 export default NavBar;
