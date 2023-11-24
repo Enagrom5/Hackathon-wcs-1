@@ -47,4 +47,13 @@
   width: 4rem;
   height: 4rem;
 }
+.cartdiv{
+  position: fixed;
+  top:63px;
+  left:50%;
+  background-color: rgba(249, 231, 170, 0.794);
+  height: 20rem;
+  width: 50%;
+  border-radius: 10px;
+}
 
