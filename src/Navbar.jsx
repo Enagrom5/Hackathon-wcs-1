@@ -36,7 +36,7 @@ function NavBar({ price, numberArticle }) {
             />
           )}
           {menu && (
-            <div className="fixed top-[0.5rem] left-[0.5rem] flex text-[2rem] bg-amber-100 rounded-lg shadow-2xl p-[3px]">
+            <div className="flex-col fixed top-[0.5rem] left-[0.5rem] flex text-[2rem] bg-amber-100 rounded-lg shadow-2xl p-[3px]">
               <IoCloseOutline
                 className="text-[#636262] text-2xl cursor-pointer mr-2"
                 onClick={() => {
@@ -44,7 +44,7 @@ function NavBar({ price, numberArticle }) {
                   toggleIconMenu();
                 }}
               />
-              <ul className="text-[13px] md:text-[15px] flex items-center mr-2">
+              <ul className="flex-col text-[13px] md:text-[15px] flex items-center mr-2">
                 <li className="mr-2">
                   <Link to="/">Accueil </Link>
                 </li>
