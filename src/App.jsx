@@ -12,7 +12,6 @@ function App() {
 
       <Navbar price={price} numberArticle={numberArticle} />
       <Outlet context={{price, setPrice, numberArticle,setNumberArticle}} />
-
       <Footer />
     </>
   );

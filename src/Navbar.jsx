@@ -6,7 +6,9 @@ import cart from "./assets/cart.png";
 import { IoCloseOutline, IoMenu } from "react-icons/io5";
 import { useMediaQuery } from "@react-hook/media-query";
 
+
 import "./App.css";
+import PlayingMusic from "./Music.jsx";
 
 function NavBar({ price, numberArticle }) {
   const [openModal, setOpenModal] = useState(false);
@@ -45,18 +47,21 @@ function NavBar({ price, numberArticle }) {
                 }}
               />
               <ul className="flex-col text-[13px] md:text-[15px] flex items-center mr-2">
+
+              <ul className="text-[13px] md:text-[15px] flex items-center mr-2">
                 <li className="mr-2">
                   <Link to="/">Accueil </Link>
                 </li>
                 <li className="mr-2">
                   <Link to="/gift">E-shop</Link>
                 </li>
-                <li className="flex items-center mr-2">
-                  <button className="flex items-center">
+                <li className=" flex items-center mr-2">
+                  <button className=" flex items-center">
                     <Link to="">Panier {numberArticle}</Link>
-                    <img src={cart} className="cart h-[20px] md:h-[30px]" />
                   </button>
+                  <img src={cart} className="cart h-[20px] md:h-[30px]" />
                 </li>
+
                 <li className="flex items-center mr-2 ml-2">
                   {numberArticle > 1 ? "Articles" : "Article"} {price}€
                 </li>
@@ -93,8 +98,8 @@ function NavBar({ price, numberArticle }) {
             <li className="mr-2">
               <Link to="/gift">E-shop</Link>
             </li>
-            <li className="flex items-center mr-2">
-              <button className="flex items-center">
+            <li className=" flex items-center mr-2">
+              <button className=" flex items-center">
                 <Link to="">Panier {numberArticle}</Link>
                 <img src={cart} className="cart h-[20px] md:h-[30px]" />
               </button>
@@ -116,6 +121,7 @@ function NavBar({ price, numberArticle }) {
                 <Login closeModal={setOpenModal} />
               </div>
             )}
+            <PlayingMusic/>
           </ul>
         </div>
       )}

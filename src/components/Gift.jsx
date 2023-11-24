@@ -20,7 +20,7 @@ function Gift({ data }) {
     <>
       <div className="w-[20rem] h-[30rem] md:w-none md:h-none flex flex-col items-center justify-around">
         <Link to={`/gift/${data.id}`}>
-          <img src={data.img} alt={data.description} />
+          <img src={data.img} alt={data.description} className="rounded" />
         </Link>
         <h6 className="mt-[-2rem] text-[2rem] text-center mx-1">{data.name}</h6>
         <p className="mt-[-2rem] text-[1.4rem]"> {data.price}€</p>

@@ -37,7 +37,7 @@ function GiftList() {
           .filter((el) => el.categories === filters || filters === "")
           .map((el) => (
             <div
-              className="m-4 border-2 border-amber-200 rounded-md shadow-2xl "
+              className=" m-4 border-2 border-amber-200 rounded-md shadow-2xl "
               key={el.id}
             >
               <Gift data={el} />
