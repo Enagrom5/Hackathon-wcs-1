@@ -3,12 +3,11 @@
   position: relative;
 }
 
-
-.Accueil, .giftDetail{
+.Accueil,
+.giftDetail {
   height: 87vh;
-
 }
-.E-shop{
+.E-shop {
   margin-bottom: 50vh;
 }
 .Accueil {
@@ -28,7 +27,7 @@
   position: fixed;
   bottom: 0px;
   width: 100%;
-  
+}
 
 .blur-background {
   backdrop-filter: blur(1rem);
@@ -38,5 +37,4 @@
   width: 100vw;
   height: 100vh;
   z-index: 100;
-
 }

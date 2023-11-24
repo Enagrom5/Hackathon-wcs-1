@@ -2,8 +2,7 @@ import { useState } from "react";
 import data from "../../data/data.json";
 import Gift from "./gift";
 
-
-function GiftList( ) {
+function GiftList() {
   const [filters, setFilters] = useState("");
   let array = [];
   for (let i = 0; i < 15; i++) {
@@ -12,7 +11,7 @@ function GiftList( ) {
   const newArray = [...new Set(array)];
 
   return (
-    <div className="E-shop  flex flex-wrap items-center mb-48">
+    <div className="E-shop mt-[0.5rem] md:mt-none flex flex-wrap items-center mb-20 md:mb-48">
       <div className="flex justify-center items-center p-2 w-full">
         <h1>My Chrismast gift</h1>
         <form className="border-2 ml-2">
@@ -41,7 +40,7 @@ function GiftList( ) {
               className="m-4 border-2 border-amber-200 rounded-md shadow-2xl "
               key={el.id}
             >
-              <Gift data={el}/>
+              <Gift data={el} />
             </div>
           ))}
       </div>

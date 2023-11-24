@@ -29,19 +29,19 @@ function GiftDetails() {
 
   return (
     <div className="m-[100px] flex justify-center leading-[40px]">
-      <div className="w-[800px] bg-amber-100 rounded-lg shadow-2xl p-[4rem]">
+      <div className="w-[800px] bg-amber-100 rounded-lg shadow-2xl px-[4rem] py-[1rem] md:p-[4rem]">
         <div key={gift.id}>
           <h1 className="text-center">{gift.name}</h1>
           <div className="flex justify-center">
             <img src={gift.img} alt={gift.name} />
           </div>
-          <p>Prix: {gift.price}</p>
+          <p>Prix: {gift.price}€</p>
           <p>
             Description: <br></br>
             {gift.description}
           </p>
         </div>
-        <div className="mt-[5rem] flex justify-around">
+        <div className="mt-[2rem] md:mt-[5rem] flex gap-[1rem] md:justify-around">
           {gift.id > 1 && (
             <button
               type="button"
