@@ -13,7 +13,7 @@ function GiftList() {
   
 
   return (
-    <div className="E-shop mt-[0.5rem] md:mt-none flex flex-wrap items-center mb-20 md:mb-48">
+    <div className="E-shop mt-[0.5rem] md:mt-none flex flex-wrap items-center mb-20 md:mb-20">
       <div className="flex justify-center items-center p-2 w-full mt-10">
         <h1>My Chrismast gift</h1>
         <form className="border-2 ml-2">

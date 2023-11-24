@@ -58,11 +58,11 @@ function NavBar({ price, numberArticle, carts }) {
                 <li>
                   <Link to="/gift">E-shop</Link>
                 </li>
-                <li className=" flex items-center mr-2">
-                  <button className=" flex items-center">
-                    <Link to="">Panier {numberArticle}</Link>
+                <li className="flex items-center mr-2">
+                  <button className="flex items-center">
+                    <Link to="/panier">Panier {numberArticle}</Link>
+                    <img src={cart} className="cart h-[20px] md:h-[30px]" />
                   </button>
-                  <img src={cart} className="cart h-[20px] md:h-[30px]" />
                 </li>
 
                 <li className="flex items-center  ">
@@ -102,8 +102,8 @@ function NavBar({ price, numberArticle, carts }) {
               <Link to="/gift">E-shop</Link>
             </li>
             <li ref={ref} className=" flex items-center mr-2">
-              <button className=" flex items-center">
-                <Link to="">Panier {numberArticle}</Link>
+              <button className="flex items-center">
+                <Link to="/panier">Panier {numberArticle}</Link>
                 <img src={cart} className="cart h-[20px] md:h-[30px]" />
               </button>
             </li>
