@@ -14,6 +14,11 @@
   background-image: url("./assets/BG1.jpg");
   background-size: 100vw 87vh;
   background-repeat: no-repeat;
+  @media screen and (max-width: 768px) {
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+  }
 }
 .Navbar {
   background-image: url("./assets/navbg.png");
