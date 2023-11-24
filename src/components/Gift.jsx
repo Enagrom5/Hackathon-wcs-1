@@ -33,7 +33,7 @@ function Gift({ data }) {
 
     localStorage.removeItem(data.id);
   }
-  console.log(numberArticle);
+  
 
   return (
     <>

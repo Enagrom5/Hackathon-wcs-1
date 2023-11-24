@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate,useOutletContext } from "react-router-dom";
 
 function PanierGiftDetails() {
   const [gift, setGift] = useState({});
   const { id } = useParams();
   const navigate = useNavigate();
-  console.info(gift.img);
+  const { price, setPrice, setNumberArticle, carts, setCarts } =
+  useOutletContext();
 
   useEffect(() => {
     const storageKeys = Object.keys(localStorage);

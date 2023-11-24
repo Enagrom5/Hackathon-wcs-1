@@ -63,7 +63,6 @@ function NavBar({ price, numberArticle, carts }) {
                     <Link to="/panier">Panier {numberArticle}</Link>
                     <img src={cart} className="cart h-[20px] md:h-[30px]" />
                   </button>
-                  <img src={cart} className="cart h-[20px] md:h-[30px]" />
                 </li>
 
                 <li className="flex items-center  ">
