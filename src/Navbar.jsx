@@ -47,8 +47,6 @@ function NavBar({ price, numberArticle }) {
                 }}
               />
               <ul className="flex-col text-[13px] md:text-[15px] flex items-center mr-2">
-
-              <ul className="text-[13px] md:text-[15px] flex items-center mr-2">
                 <li className="mr-2">
                   <Link to="/">Accueil </Link>
                 </li>
