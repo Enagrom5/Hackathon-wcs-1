@@ -26,7 +26,7 @@ function Gift({ data }) {
 
   return (
     <>
-      <div className="w-[20rem] h-[30rem] md:w-none md:h-none flex flex-col items-center justify-around bg-orange-100">
+      <div className=" card w-[20rem] h-[30rem] md:w-none md:h-none flex flex-col items-center justify-around ">
         <Link to={`/gift/${data.id}`}>
           <img src={data.img} alt={data.description} className="rounded" />
         </Link>

@@ -51,9 +51,12 @@
   position: fixed;
   top:63px;
   left:50%;
-  background-color: rgba(249, 231, 170, 0.794);
+  background-color: rgba(253, 243, 207, 0.794);
   height: 20rem;
   width: 50%;
   border-radius: 10px;
+}
+.card{
+  background-color: rgba(247, 247, 231, 0.689);
 }
 

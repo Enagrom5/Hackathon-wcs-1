@@ -14,7 +14,7 @@ function GiftList() {
 
   return (
     <div className="E-shop mt-[0.5rem] md:mt-none flex flex-wrap items-center mb-20 md:mb-48">
-      <div className="flex justify-center items-center p-2 w-full">
+      <div className="flex justify-center items-center p-2 w-full mt-10">
         <h1>My Chrismast gift</h1>
         <form className="border-2 ml-2">
           <label htmlFor="select-gift">
@@ -34,7 +34,7 @@ function GiftList() {
           </label>
         </form>
       </div>
-      <div className="flex flex-wrap justify-center items-center">
+      <div className="flex flex-wrap justify-center items-center mt-10">
         {data
           .filter((el) => el.categories === filters || filters === "")
           .map((el) => (

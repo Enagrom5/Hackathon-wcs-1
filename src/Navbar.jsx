@@ -27,6 +27,8 @@ function NavBar({ price, numberArticle, carts }) {
   const [ref, hovering] = useHover();
   const display = hovering ? "flex" : "none";
 
+  const newcarts = [...new Set(carts)]
+
   return (
     <div>
       {isMobile ? (
@@ -128,7 +130,7 @@ function NavBar({ price, numberArticle, carts }) {
       )}
       <div className="cartdiv flex justify-center items-center flex-wrap" style={{ display }}>
         
-          {carts.map((item) => (
+          {newcarts.map((item) => (
             <div key={item} className="flex p-4">
                 <h2 className="pr-4">{item.name}</h2>
               <img src={item.img} className="w-10 h-10" />
