@@ -41,7 +41,7 @@ function NavBar({ price, numberArticle, carts }) {
             />
           )}
           {menu && (
-            <div className="fixed top-[0.5rem] left-[0.5rem] flex text-[2rem] bg-amber-100 rounded-lg shadow-2xl p-[3px]">
+            <div className="flex-col fixed w-[8rem] top-[0.5rem] left-[0.5rem] flex text-[2rem] bg-amber-100 rounded-lg shadow-2xl p-[3px]">
               <IoCloseOutline
                 className="text-[#636262] text-2xl cursor-pointer mr-2"
                 onClick={() => {
@@ -49,12 +49,11 @@ function NavBar({ price, numberArticle, carts }) {
                   toggleIconMenu();
                 }}
               />
-
-              <ul className="text-[13px] md:text-[15px] flex items-center mr-2">
-                <li className="mr-2">
+              <ul className="flex-col space-y-7 mb-3 text-[13px] md:text-[15px] justify-center flex items-center ">
+                <li>
                   <Link to="/">Accueil </Link>
                 </li>
-                <li className="mr-2">
+                <li>
                   <Link to="/gift">E-shop</Link>
                 </li>
                 <li className=" flex items-center mr-2">
@@ -64,11 +63,11 @@ function NavBar({ price, numberArticle, carts }) {
                   <img src={cart} className="cart h-[20px] md:h-[30px]" />
                 </li>
 
-                <li className="flex items-center mr-2 ml-2">
+                <li className="flex items-center  ">
                   {numberArticle > 1 ? "Articles" : "Article"} {price}€
                 </li>
                 <button
-                  className="flex items-center mr-2"
+                  className="flex items-center "
                   type="button"
                   onClick={() => {
                     setOpenModal(true);
